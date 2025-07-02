@@ -1,0 +1,14 @@
+---
+import { Image } from 'astro:assets'
+const { imagePath, caption } = Astro.props;
+
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*/*.{jpeg,jpg,png,gif}');
+if (imagePath && !images[imagePath]) throw new Error(`"${imagePath}" does not exist in glob: "./src/assets/*.{jpeg,jpg,png,gif}"`);
+
+---
+{imagePath && <figure>
+    <Image class="w-full rounded-xl shadow-xl" src={images[imagePath]()} alt="dashboard image"/>
+    <div class="m-2">
+        <figcaption class="text-gray-500 text-center" set:html={caption}></figcaption>
+    </div>
+</figure>}

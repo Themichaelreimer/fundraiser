@@ -4,6 +4,10 @@ import './src/styles/global.css';
 import Layout from '../layouts/Layout.astro';
 
 import Hero from '../components/Hero.astro';
+import Quote from '../components/Quote.astro';
+import Article from '../components/Article.astro';
+
+const frontPageArticles = Object.values(import.meta.glob('..//content/articles/*.md', {eager:true}));
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -14,4 +18,16 @@ import Hero from '../components/Hero.astro';
 		title="Autumn Song"
 		subtitle="A community gathering with song to support those whose lives are affected by poverty, compounded by Canada's housing crisis."
 	/>
+	{ 
+		frontPageArticles.map((article:any, idx) => <Article
+			quoteText={article.frontmatter.quoteText}
+			attributionName={article.frontmatter.attributionName}
+			attributionTitle={article.frontmatter.attributionTitle}
+			text={article.frontmatter.text}
+			imageOnRight={idx%2==0}
+			imagePath={article.frontmatter.imagePath}
+			imageAttribution={article.frontmatter.imageAttribution}
+		>
+		</Article>)
+	}
 </Layout>
