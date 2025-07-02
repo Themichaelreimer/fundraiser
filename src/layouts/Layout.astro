@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+const { title } = Astro.props;
 ---
 <!doctype html>
 <html lang="en">
@@ -9,9 +10,9 @@ import "../styles/global.css";
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Autumn Song</title>
+		<title>{title} - Autumn Song</title>
 	</head>
-	<body class="">
+	<body>
 		<slot />
 	</body>
 </html>

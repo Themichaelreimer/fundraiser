@@ -1,6 +1,6 @@
 ---
 imagePath: /src/assets/frontpage/sign.jpg
-imageAttribution: <i>Manitfest Your Destiny - "Is it all too hard?"</i> By Alex Proimos - <a href="https://creativecommons.org/licenses/by-sa/2.0/deed.en" class="text-blue-500 underline" >CC BY 2.0</a>
+imageAttribution: <i>Manifest Your Destiny - "Is it all too hard?"</i> By Alex Proimos - <a href="https://creativecommons.org/licenses/by-sa/2.0/deed.en" class="text-blue-500 underline" >CC BY 2.0</a>
 quoteText: Who am I to be blind, pretending not to see their need?
 attributionName: From "Man in the Mirror" 
 attributionTitle: by Siedah Garrett and Glen Ballard on Michael Jackson's "Bad" Album
