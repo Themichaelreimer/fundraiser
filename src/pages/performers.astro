@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/Layout.astro';
+import TopNav from '../components/TopNav.astro';
+import PerformerArticle from '../components/PerformerArticle.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+
+const performers = Object.values(import.meta.glob('..//content/performers/*.md', {eager:true}));
+
+---
+<Layout title="Performers">
+    <TopNav title="Performers"></TopNav>
+    
+    <SectionHeader title="Performers" imagePath="/src/assets/performers/background.jpg"></SectionHeader>
+
+
+    <div class="py-12"></div>
+    { 
+		performers.map((article:any, idx) => <PerformerArticle
+			name={article.frontmatter.name}
+			description={article.frontmatter.description}
+			imageOnRight={idx%2==0}
+			imagePath={article.frontmatter.imagePath}
+		>
+		</PerformerArticle>)
+	}
+</Layout>

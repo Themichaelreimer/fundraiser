@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro';
+import TopNav from '../components/TopNav.astro';
+import ArtArticle from '../components/ArtArticle.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+const content = Object.values(import.meta.glob('..//content/art/*.md', {eager:true}));
+
+---
+<Layout title="Gallery">
+    <TopNav title="Gallery"></TopNav>
+    <SectionHeader title="Art Gallery" imagePath="/src/assets/art/background.jpg">
+        
+    </SectionHeader>
+    <div class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-2xl xl:gap-16 md:grid md:grid-cols-3 sm:py-16 lg:px-6">
+    { 
+		content.map((article:any, idx) => <ArtArticle
+			name={article.frontmatter.name}
+			description={article.frontmatter.description}
+            artContentType={article.frontmatter.artContentType}
+			imageOnRight={idx%2==0}
+			imagePath={article.frontmatter.imagePath}
+            colspan={article.frontmatter.colspan}
+		>
+		</ArtArticle>)
+	}
+    </div>
+</Layout>

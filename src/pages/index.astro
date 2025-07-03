@@ -1,10 +1,7 @@
 ---
-import './src/styles/global.css';
-
 import Layout from '../layouts/Layout.astro';
 
 import Hero from '../components/Hero.astro';
-import Quote from '../components/Quote.astro';
 import Article from '../components/Article.astro';
 
 const frontPageArticles = Object.values(import.meta.glob('..//content/articles/*.md', {eager:true}));
