@@ -20,6 +20,7 @@ const content = Object.values(import.meta.glob('..//content/art/*.md', {eager:tr
 			imageOnRight={idx%2==0}
 			imagePath={article.frontmatter.imagePath}
             colspan={article.frontmatter.colspan}
+            link={article.frontmatter.link}
 		>
 		</ArtArticle>)
 	}
