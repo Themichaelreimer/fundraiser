@@ -7,15 +7,16 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/**');
 if (imagePath && !images[imagePath]) throw new Error(`"${imagePath}" does not exist in glob: "./src/assets/**"`);
 ---
 
-<div class=`bg-white border border-gray-200 rounded-lg shadow-sm col col-span-${colspan}`>
-    <a href={link}>
-        <Image class="rounded-t-lg" src={images[imagePath]()} alt={name} ></Image>
-    </a>
-    <div class="p-5">
+<div class="flex flex-col col-span-3 items-center bg-white rounded-lg flex-row w-full px-40">
+
+    <div class="flex flex-col w-full justify-between rounded-l-lg px-4 py-4 shadow-md leading-normal border border-gray-200">
         <a href={link}>
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">{name}</h5>
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">{name}</h5>
         </a>
-        <p class="mb-3 font-normal text-gray-700" set:html={description}></p>
+        <p class="mb-3 font-normal text-gray-700 " set:html={description}></p>
         { link && <a href={link} class="text-blue-500 bold">Bid on 32 Auctions</a> }
     </div>
+    <a href={link}>
+        <Image class="object-cover w-3xl rounded-t-lg shadow-lg h-96 md:h-auto" src={images[imagePath]()} alt={name} ></Image>
+    </a>
 </div>
