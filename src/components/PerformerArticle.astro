@@ -2,7 +2,7 @@
     const {imageOnRight, imagePath, description, name } = Astro.props;
     import CaptionedImage from "./CaptionedImage.astro";
 ---
-<section class="bg-white">
+<section class="">
     <div class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
         { !imageOnRight && <CaptionedImage imagePath={imagePath}/>}
         <div class="mt-4 md:mt-0">

@@ -7,7 +7,7 @@ import CaptionedImage from './CaptionedImage.astro'
 
 ---
 
-<section class="bg-white">
+<section class="hidden lg:flex">
 
     <div class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
         <div class="blob blob-1 absolute"></div>
@@ -17,6 +17,13 @@ import CaptionedImage from './CaptionedImage.astro'
             <p class="mb-6 font-light text-gray-900 md:text-lg" set:html={text}></p>
         </div>
         { imageOnRight &&  <CaptionedImage imagePath={imagePath} caption={imageAttribution} /> }
+    </div>
+</section>
+<section class="flex lg:hidden">
+    <div class="px-2 py-8">
+        <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 ">{quoteText}</h2>
+        <p class="mb-6 font-light text-gray-900 md:text-lg" set:html={text}></p>
+        <CaptionedImage imagePath={imagePath} caption={imageAttribution}/>
     </div>
 </section>
 
