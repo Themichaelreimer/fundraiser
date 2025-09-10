@@ -3,10 +3,26 @@ import Layout from '../layouts/Layout.astro';
 import TopNav from '../components/TopNav.astro';
 import SectionHeader from '../components/SectionHeader.astro';
 
+import CaptionedImage from '../components/CaptionedImage.astro';
+
+import { Image } from 'astro:assets'
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/**');
+const imagePath="/src/assets/poster.png";
+
 ---
 <Layout title="Contact Us">
     <TopNav title="Contact Us"></TopNav>
     <SectionHeader title="Contact Us">
         
     </SectionHeader>
+    <div class="max-w-screen-lg mx-auto items-center shadow-md my-8 border border-gray-400">
+        <!--<CaptionedImage imagePath="/src/assets/poster.png"></CaptionedImage> -->
+        <Image class="w-full rounded-xl shadow-xl" src={images[imagePath]()} alt="dashboard image"/>
+    </div>
+    <div class="flex mx-auto items-center">
+        <p>Tickets available through</p>
+    </div>
+    
+
+    
 </Layout>
