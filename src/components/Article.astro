@@ -14,6 +14,7 @@ import CaptionedImage from './CaptionedImage.astro'
         { !imageOnRight && <CaptionedImage imagePath={imagePath} caption={imageAttribution}/>}
         <div class="mt-4 md:mt-0">
             <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 ">{quoteText}</h2>
+            <p class="mb-4 text-left italic text-gray-400">{attributionName} {attributionTitle}</p>
             <p class="mb-6 font-light text-gray-900 md:text-lg" set:html={text}></p>
         </div>
         { imageOnRight &&  <CaptionedImage imagePath={imagePath} caption={imageAttribution} /> }
@@ -22,6 +23,7 @@ import CaptionedImage from './CaptionedImage.astro'
 <section class="flex lg:hidden">
     <div class="px-2 py-8">
         <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 ">{quoteText}</h2>
+        <p class="mb-4 text-right italic text-gray-400">{attributionName} {attributionTitle}</p>
         <p class="mb-6 font-light text-gray-900 md:text-lg" set:html={text}></p>
         <CaptionedImage imagePath={imagePath} caption={imageAttribution}/>
     </div>

@@ -2,7 +2,12 @@
 import Layout from '../layouts/Layout.astro';
 
 import Hero from '../components/Hero.astro';
+import TopNav from '../components/TopNav.astro';
 import Article from '../components/Article.astro';
+
+import { Image } from 'astro:assets'
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/**');
+const imagePath="/src/assets/poster.png";
 
 const frontPageArticles = Object.values(import.meta.glob('..//content/articles/*.md', {eager:true}));
 
@@ -11,10 +16,10 @@ const frontPageArticles = Object.values(import.meta.glob('..//content/articles/*
 ---
 
 <Layout title="Home">
-	<Hero 
-		title="Autumn Song"
-		subtitle="A community gathering with song to support those whose lives are affected by poverty, compounded by Canada's housing crisis."
-	/>
+	<div class="mb-20"><TopNav title="Home"></TopNav></div>
+	<div class="flex justify-center max-h-1/2">
+		<Image class="w-full rounded-xl shadow-xl mx-24 max-w-3/4 " src={images[imagePath]()} alt="dashboard image"/>
+	</div>
 	{ 
 		frontPageArticles.map((article:any, idx) => <Article
 			quoteText={article.frontmatter.quoteText}
