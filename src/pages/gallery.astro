@@ -11,7 +11,7 @@ const content = Object.values(import.meta.glob('..//content/art/*.md', {eager:tr
     <SectionHeader title="Art Gallery" imagePath="/src/assets/art/background.jpg">
         
     </SectionHeader>
-    <div class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-2xl xl:gap-16 md:grid md:grid-cols-3 sm:py-16 lg:px-6">
+    <div class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-2xl md:max-w-2xl">
     { 
 		content.map((article:any, idx) => <ArtArticle
 			name={article.frontmatter.name}

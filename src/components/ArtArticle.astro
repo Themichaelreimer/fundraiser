@@ -6,5 +6,5 @@ import ArtItem from "./ArtItem.astro";
     const {name, description, imagePath, artContentType, colspan, link} = Astro.props;
 
 ---
-{ artContentType=="biography" && <ArtistBio name={name} description={description} imagePath={imagePath}></ArtistBio> }
+{ artContentType=="biography" && <ArtistBio name={name} description={description} imagePath={imagePath} link={link}></ArtistBio> }
 { artContentType=="item" && <ArtItem name={name} description={description} imagePath={imagePath} colspan={colspan} link={link}></ArtItem>}
