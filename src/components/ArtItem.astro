@@ -23,7 +23,7 @@ if (imagePath && !images[imagePath]) throw new Error(`"${imagePath}" does not ex
 
 <div class="block my-2">
     <a href={link}>
-        <Image class="object-cover w-3xl rounded-t-lg shadow-lg h-96" src={images[imagePath]()} alt={name} ></Image>
+        <Image class="object-cover rounded-t-lg shadow-lg h-96 " src={images[imagePath]()} alt={name} ></Image>
     </a>
     <div class="bg-white flex-col w-full justify-between rounded-l-lg px-4 py-4 shadow-md leading-normal border border-gray-200">
         <a href={link}>
