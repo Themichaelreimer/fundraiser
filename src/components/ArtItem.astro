@@ -10,19 +10,19 @@ if (imagePath && !images[imagePath]) throw new Error(`"${imagePath}" does not ex
 <div class="hidden flex-col col-span-3 items-center rounded-lg flex-row w-full px-40">
 
     <div class="bg-white flex flex-col w-full justify-between rounded-l-lg px-4 py-4 shadow-md leading-normal border border-gray-200">
-        <a href={link}>
+        <a href={link} target="_blank">
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900" set:html={name}></h5>
         </a>
         <p class="mb-3 font-normal text-gray-700 " set:html={description}></p>
-        { link && <a href={link} class="text-blue-500 bold">Bid on 32 Auctions</a> }
+        { link && <a href={link} class="text-blue-500 bold">Bid on this at 32 Auctions</a> }
     </div>
-    <a href={link}>
+    <a href={link} target="_blank">
         <Image class="object-cover w-3xl rounded-t-lg shadow-lg h-96 md:h-auto" src={images[imagePath]()} alt={name} ></Image>
     </a>
 </div>
 
 <div class="block my-2">
-    <a href={link}>
+    <a href={link} target="_blank">
         <Image class="object-cover rounded-t-lg shadow-lg h-96 " src={images[imagePath]()} alt={name} ></Image>
     </a>
     <div class="bg-white flex-col w-full justify-between rounded-l-lg px-4 py-4 shadow-md leading-normal border border-gray-200">
@@ -30,7 +30,7 @@ if (imagePath && !images[imagePath]) throw new Error(`"${imagePath}" does not ex
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900" set:html={name}></h5>
         </a>
         <p class="mb-3 font-normal text-gray-700 " set:html={description}></p>
-        { link && <a href={link} class="text-blue-500 bold">Bid on 32 Auctions</a> }
+        { link && <a href={link} target="_blank" class="text-blue-500 bold">Bid on this at 32 Auctions</a> }
     </div>
 
 </div>
