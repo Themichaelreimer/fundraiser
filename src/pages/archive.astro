@@ -1,0 +1,17 @@
+---
+import Layout from '../layouts/Layout.astro';
+import TopNav from '../components/TopNav.astro';
+---
+
+<Layout title="Home">
+	<div class="mb-20"><TopNav title="Home"></TopNav></div>
+    <div class="p-6 m-6 rounded xl bg-white border border-gray-200">
+        <h1 class="text-2xl">Autumn Song 2025</h1>
+        <div class="flex items-center justify-between py-4 max-w-96">
+            <a href="/2025/performers" class="font-semibold text-blue-900 underline">Performers</a>
+            <br/>
+            <a href="/2025/gallery" class="font-semibold text-blue-900 underline">Art Gallery</a>   
+        </div>        
+    </div>
+
+</Layout>

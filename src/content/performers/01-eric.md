@@ -1,0 +1,5 @@
+---
+imagePath: /src/assets/performers/EricLavoie.jpg
+name: "Eric Lavoie"
+description: Born and raised on Treaty No. 1 Territory, Eric Lavoie’s music is rooted in a commitment to honest storytelling. Eric shares songs about struggle, perseverance, triumph, and truth, whether the stories are uplifting or heavy. Blending elements of folk, country, blues, and psychedelia, Eric strives to create songs that feel true to himself, aiming to give the melodies and stories the space they need to come alive. <br/><br/> Above all, Eric hopes his music can contribute to positive change, offering listeners a chance to reflect, connect, and find meaning in their own lives. <br/><br/> Check out Eric Lavoie on <a href="https://open.spotify.com/artist/6Sf4cXBn1AW52OOXC5hemR?si=BczfSMSDTrSYJR_uDWr5zQ" class="text-blue-500 underline">Spotify</a> and <a href="https://www.instagram.com/ericlavoiemusic/" class="text-blue-500 underline">Instagram</a>
+---
