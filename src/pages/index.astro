@@ -18,8 +18,8 @@ const frontPageArticles = Object.values(import.meta.glob('..//content/articles/*
 <Layout title="Home">
 	<div class="mb-20"><TopNav title="Home"></TopNav></div>
 	<div class="flex justify-center items-center">
-		<div class="w-1/3">
-			<Image class="w-full rounded-xl shadow-xl mx-24 my-12" src={images[imagePath]()} alt="dashboard image"/>
+		<div class="max-w-xl">
+			<Image class="w-full rounded-xl shadow-xl" src={images[imagePath]()} alt="dashboard image"/>
 		</div>
 	</div>
 	{ 

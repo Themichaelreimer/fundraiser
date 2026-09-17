@@ -2,18 +2,19 @@
     const { title } = Astro.props;
 ---  
   <header class="fixed inset-x-0 top-0 z-50 border-b border-gray-200/90 backdrop-blur-md bg-white/80">
-    <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+    <nav class="flex items-center justify-between p-4 sm:p-6 lg:px-8" aria-label="Global">
       <div class="flex flex-1">
         <a href="#" class="-m-1.5 p-1.5">
           <span class="sr-only">{title}</span>
           <!--  <img class="h-8 w-auto" src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600" alt=""> -->
         </a>
       </div>
-      <div class="flex gap-x-12 text-xs md:text-sm/6">
+      <div class="grid grid-cols-2 sm:flex gap-x-6 md:gap-x-12 text-sm/6">
         <a href="/" class="font-semibold text-gray-900">Home</a>
         <a href="/performers" class="font-semibold text-gray-900">Performers</a>
         <a href="/contact" class="font-semibold text-gray-900">Contact Us</a>
         <a href="/archive" class="font-semibold text-gray-900">Archive</a>
+        <a href="https://www.32auctions.com/organizations/129847/auctions/205825/auction_items/" class="font-semibold text-gray-900">Auction</a>
         <a href="https://www.32auctions.com/organizations/129847/auctions/205825/auction_items/7143384" class="font-semibold text-blue-800">Buy Tickets</a>
       </div>
       <div class="flex flex-1 justify-end">
